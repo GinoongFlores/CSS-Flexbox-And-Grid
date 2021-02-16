@@ -1,0 +1,52 @@
+/* Flexbox
+
+.wrapper {
+  width: 500px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.wrapper > div {
+  flex: 1 2 150px;
+} */
+
+/* Grid */
+#wrapper {
+  margin: 20px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+/* Box alignment */
+
+#wrapper-forbox {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: flex-end;
+  min-height: 200px;
+}
+
+.box1 {
+  align-self: stretch;
+}
+
+.box2 {
+  align-self: flex-start;
+}
+
+/* Align items in CSS grids */
+
+#wrapper-forgrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: end;
+  grid-auto-rows: 200px;
+}
+
+.box-grid1 {
+  align-self: stretch;
+}
+
+.box-grid2 {
+  align-self: start;
+}
