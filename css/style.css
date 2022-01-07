@@ -22,8 +22,8 @@
 #wrapper-forbox {
   margin-bottom: 20px;
   display: flex;
-  align-items: flex-end;
-  min-height: 200px;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .box1 {
