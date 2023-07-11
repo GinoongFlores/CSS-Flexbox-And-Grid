@@ -1,46 +1,46 @@
 .wrapper {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: 1fr 1fr 1fr 1fr;
-  gap: 1rem;
-  grid-template-areas:
-    "A A A B E"
-    "C D D B F";
+	display: grid;
+	grid-template-columns: repeat(5, 1fr);
+	grid-template-rows: 1fr 1fr 1fr 1fr;
+	gap: 1rem;
+	grid-template-areas:
+		"A A A A E"
+		"C D D B F";
 }
 
 div {
-  background: gainsboro;
-  padding: 1em;
+	background: gainsboro;
+	padding: 1em;
 }
 
 .wrapper .a {
-  grid-area: A;
-  /* Place it at the 'A' position in the grid template */
-  background: pink;
-  content: "Area A";
+	grid-area: A;
+	/* Place it at the 'A' position in the grid template */
+	background: pink;
+	content: "Area A";
 }
 
 .wrapper .b {
-  grid-area: B;
-  background: lightgreen;
+	grid-area: B;
+	background: lightgreen;
 }
 
 .wrapper .c {
-  grid-area: C;
-  background: paleturquoise;
+	grid-area: C;
+	background: paleturquoise;
 }
 
 .wrapper .d {
-  grid-area: B;
-  background: plum;
+	grid-area: B;
+	background: plum;
 }
 
 .wrapper .e {
-  grid-area: E;
-  background: lavender;
+	grid-area: E;
+	background: lavender;
 }
 
 .wrapper .f {
-  grid-area: F;
-  background: papayawhip;
+	grid-area: F;
+	background: papayawhip;
 }
