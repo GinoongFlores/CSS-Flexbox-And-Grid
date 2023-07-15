@@ -1,10 +1,124 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600;800&family=VT323&display=swap");
+
+* {
+	box-sizing: border-box;
+}
+
+:root {
+	--p-30px: 30px;
+	--default-border: 1px solid #ddd;
+}
 
 body {
-  margin: 0;
-  font-family: "Poppins";
+	margin: 0;
+	font-family: "Poppins";
 }
-ul, li {
-  padding: 0;
-  list-style-type: none;
+
+ul,
+li {
+	padding: 0;
+	list-style-type: none;
+}
+
+.grid-container {
+	display: grid;
+	/* make the middle item as bigger than the other. 5 fractions in total */
+	grid-template-columns: 1fr 3fr 1fr;
+	/* add only gap on column */
+	column-gap: 30px;
+}
+
+header {
+	grid-column: span 3;
+	text-align: center;
+	border-bottom: var(--default-border);
+}
+
+nav {
+	padding: var(--p-30px);
+	border-right: var(--default-border);
+}
+
+nav li {
+	text-decoration: underline;
+	cursor: pointer;
+}
+
+/* article  */
+
+article {
+	padding: var(--p-30px);
+}
+
+article h2 {
+	max-width: 800px;
+	font-size: 3rem;
+}
+
+article img {
+	width: 100%;
+	height: auto;
+}
+
+article p {
+	margin-top: var(--p-30px);
+	line-height: 2rem;
+	color: #777;
+}
+
+/* aside  */
+
+aside {
+	padding: var(--p-30px);
+	border-left: var(--default-border);
+}
+
+/* footer */
+
+footer {
+	grid-column: span 3;
+	text-align: center;
+	border-top: var(--default-border);
+	padding: var(--p-30px);
+}
+
+/* responsiveness */
+
+@media screen and (max-width: 1200px) {
+	nav {
+		grid-column: span 3;
+		border-right: 0;
+		border-bottom: var(--default-border);
+	}
+
+	nav li {
+		display: inline-block;
+		margin-right: 1rem;
+	}
+
+	article {
+		grid-column: span 2;
+	}
+
+	aside {
+		padding: 1rem;
+	}
+}
+
+@media screen and (max-width: 980px) {
+	nav,
+	article,
+	aside {
+		grid-column: span 3;
+		border: 0;
+	}
+
+	article h2 {
+		font-size: 2.5rem;
+	}
+
+	aside {
+		border-left: none;
+		border-top: var(--default-border);
+	}
 }
